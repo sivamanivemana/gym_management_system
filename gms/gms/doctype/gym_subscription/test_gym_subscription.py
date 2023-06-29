@@ -28,5 +28,18 @@ class TestGymSubscription(FrappeTestCase):
         end_of_subscription = frappe.get_value("Gym Subscription", doc.name, "end_of_subscription")
         expected_end_date = frappe.utils.get_datetime("2023-08-27")
         self.assertEqual(end_of_subscription,expected_end_date)
+        
+
+        doc.date_of_subscription = "2023-06-29"
+        doc.duration = 60
+        doc.save()
+
+        ##added to check git
+		##add
+        end_of_subscription = frappe.get_value("Gym Subscription", doc.name, "end_of_subscription")
+        expected_end_date = frappe.utils.get_datetime("2023-08-28")
+        self.assertEqual(end_of_subscription,expected_end_date)
+        
+		
 
 
