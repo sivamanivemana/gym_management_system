@@ -102,13 +102,17 @@ app_license = "MIT"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-#	"*": {
-#		"on_update": "method",
-#		"on_cancel": "method",
-#		"on_trash": "method"
-#	}
-# }
+doc_events = {
+	"Gym Member": {
+		"after_insert": "gms.gms.doctype.gym_member.gym_member.create_user_from_gym_member"
+	}
+    # "Gym Subscription": {
+    #     "on_update": "gms.gms.doctype.gym_subscription.gym_subscription.calculate_remaining_days",
+    #     "on_submit": "gms.gms.doctype.gym_subscription.gym_subscription.calculate_remaining_days",
+    #     "on_cancel": "gms.gms.doctype.gym_subscription.gym_subscription.calculate_remaining_days",
+    # }
+}
+
 
 # Scheduled Tasks
 # ---------------
@@ -199,3 +203,10 @@ app_license = "MIT"
 # auth_hooks = [
 #	"gms.auth.validate"
 # ]
+
+
+
+
+
+
+

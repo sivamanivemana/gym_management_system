@@ -1,0 +1,150 @@
+<!-- custom_page.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gym Subscription</title>
+    <style>
+        /* CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #48c2d7;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-top: 0;
+        }
+
+        .table-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .table-card {
+            margin: 10px;
+            width: 600px;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: #e3d689;
+        }
+
+        .table-card-header {
+            background-color: #e6f7f3;
+            padding: 12px;
+            text-align: center;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .table-card-body {
+            padding: 12px;
+        }
+
+        .table-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .table-label {
+            font-weight: bold;
+        }
+
+        .table-data {
+            margin-left: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            border: 1px solid #712e2e;
+        }
+
+        th {
+            background-color: #a33d3d;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #73c9d4;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: #df3481;">Gym Subscription Details</h1>
+    <div class="table-container">
+        {% for subscription in gym_subscription %}
+        
+        <div class="table-card">
+            <h1>Active plan Details</h1>
+            <div class="table-card-header">{{ subscription.gym_member }}</div>
+            <div class="table-card-body">
+                <div class="table-row">
+                    <span class="table-label">Status:</span>
+                    <span class="table-data">{{ subscription.status }}</span>
+                </div><hr>
+                <div class="table-row">
+                    <span class="table-label">Trainer:</span>
+                    <span class="table-data">{{ subscription.trainer }}</span>
+                </div><hr>
+                <div class="table-row">
+                    <span class="table-label">Date of Subscription:</span>
+                    <span class="table-data">{{ subscription.date_of_subscription }}</span>
+                </div><hr>
+                
+                <div class="table-row">
+                    <span class="table-label">End of Subscription:</span>
+                    <span class="table-data">{{ subscription.end_of_subscription }}</span>
+                </div><hr>
+                <div class="table-row">
+                    <span class="table-label">Remaining Days:</span>
+                    <span class="table-data">{{ subscription.remaining_days }}</span>
+                </div><hr>
+                <div class="table-row">
+                    <span class="table-label">Amount:</span>
+                    <span class="table-data">{{ subscription.amount }}</span>
+                </div><hr>
+                <div class="table-row">
+                    <span class="table-label">Trainer Contact:</span>
+                    <span class="table-data">{{ subscription.trainer_contact }}</span>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        <div>
+            <h1>Expired Plan Details</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Trainer</th>
+                            <th>Date of Subscription</th>
+                            <th>End of Subscription</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for subscription in gym_expired %}
+                        <tr>
+                            <td>{{ subscription.status }}</td>
+                            <td>{{ subscription.trainer }}</td>
+                            <td>{{ subscription.date_of_subscription }}</td>
+                            <td>{{ subscription.end_of_subscription }}</td>
+                            <td>{{ subscription.amount }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-06-23 12:23:41.512528",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "gym_member",
+  "cardio_machine",
+  "date",
+  "time_slot",
+  "duration",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "gym_member",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Gym Member",
+   "options": "Gym Member",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cardio_machine",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Cardio Machine",
+   "options": "Cardio Machine",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "time_slot",
+   "fieldtype": "Select",
+   "label": "Time slot",
+   "options": "Morning Slot (e.g., 6:00 AM - 8:00 AM)\nMid-Morning Slot (e.g., 8:00 AM - 10:00 AM)\nAfternoon Slot (e.g., 12:00 PM - 2:00 PM)\nEvening Slot (e.g., 4:00 PM - 6:00 PM)\nLate Evening Slot (e.g., 7:00 PM - 9:00 PM)\nWeekend Morning Slot (e.g., 9:00 AM - 11:00 AM)\nWeekend Afternoon Slot (e.g., 1:00 PM - 3:00 PM)\nCustom Slot (e.g., allow users to specify their preferred time)"
+  },
+  {
+   "description": "The duration of the booking in minutes.",
+   "fieldname": "duration",
+   "fieldtype": "Duration",
+   "label": "Duration"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Cardio Machine Booking",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-06-23 12:26:44.932696",
+ "modified_by": "Administrator",
+ "module": "Gms",
+ "name": "Cardio Machine Booking",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gym Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gym Member",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

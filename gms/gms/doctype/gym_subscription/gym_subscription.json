@@ -1,0 +1,134 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-06-26 11:59:56.189893",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "gym_member",
+  "active_plan",
+  "duration",
+  "date_of_subscription",
+  "end_of_subscription",
+  "remaining_days",
+  "trainer",
+  "trainer_contact",
+  "amount",
+  "status",
+  "cupon",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "gym_member",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Gym Member",
+   "options": "Gym Member",
+   "reqd": 1
+  },
+  {
+   "fieldname": "active_plan",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Active Plan",
+   "options": "Gym Membership",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "active_plan.duration",
+   "fieldname": "duration",
+   "fieldtype": "Duration",
+   "in_list_view": 1,
+   "label": "Duration",
+   "options": "Gym Trainer"
+  },
+  {
+   "fieldname": "date_of_subscription",
+   "fieldtype": "Date",
+   "label": "Date Of Subscription"
+  },
+  {
+   "fieldname": "end_of_subscription",
+   "fieldtype": "Date",
+   "label": "End Of Subscription"
+  },
+  {
+   "fieldname": "trainer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Trainer",
+   "options": "Gym Trainer",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "trainer.contact_number",
+   "fieldname": "trainer_contact",
+   "fieldtype": "Data",
+   "label": "Trainer Contact",
+   "options": "Gym Trainer"
+  },
+  {
+   "fieldname": "remaining_days",
+   "fieldtype": "Duration",
+   "label": "Remaining Days"
+  },
+  {
+   "fetch_from": "active_plan.cost",
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nExpired"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Gym Subscription",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "cupon",
+   "fieldtype": "Select",
+   "label": "Cupon",
+   "options": "FLAT-10\nFLAT-20"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-06-28 15:57:50.704041",
+ "modified_by": "Administrator",
+ "module": "Gms",
+ "name": "Gym Subscription",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

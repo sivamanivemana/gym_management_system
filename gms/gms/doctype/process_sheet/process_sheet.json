@@ -1,0 +1,76 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-06-29 10:30:34.115496",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "diet_plan",
+  "time_schedule",
+  "status",
+  "plan"
+ ],
+ "fields": [
+  {
+   "fieldname": "diet_plan",
+   "fieldtype": "Data",
+   "label": "Diet Plan"
+  },
+  {
+   "fieldname": "time_schedule",
+   "fieldtype": "Data",
+   "label": "Time Schedule"
+  },
+  {
+   "default": "0",
+   "fieldname": "status",
+   "fieldtype": "Check",
+   "label": "Status"
+  },
+  {
+   "fieldname": "plan",
+   "fieldtype": "Data",
+   "label": "Plan "
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-06-29 10:30:55.455092",
+ "modified_by": "Administrator",
+ "module": "Gms",
+ "name": "Process Sheet",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gym Trainer",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1
+}

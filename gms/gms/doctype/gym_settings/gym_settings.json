@@ -1,0 +1,91 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "prompt",
+ "creation": "2023-06-22 12:46:28.605974",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "gym_name",
+  "adress",
+  "contact_number",
+  "email_adress"
+ ],
+ "fields": [
+  {
+   "fieldname": "gym_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Gym Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "adress",
+   "fieldtype": "Text",
+   "label": "Adress"
+  },
+  {
+   "fieldname": "contact_number",
+   "fieldtype": "Data",
+   "label": "Contact Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email_adress",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email Adress",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2023-06-23 12:02:56.043385",
+ "modified_by": "Administrator",
+ "module": "Gms",
+ "name": "Gym Settings",
+ "naming_rule": "Set by user",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Gym Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Gym Member",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Gym Trainer",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,75 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "FJ.-.{gym_member}.-.##",
+ "creation": "2023-06-25 21:45:10.345099",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "gym_member",
+  "weight",
+  "calories",
+  "date"
+ ],
+ "fields": [
+  {
+   "fieldname": "gym_member",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Gym Member",
+   "options": "Gym Member",
+   "reqd": 1
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Weight",
+   "reqd": 1
+  },
+  {
+   "fieldname": "calories",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Calories",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-06-25 21:46:58.695637",
+ "modified_by": "Administrator",
+ "module": "Gms",
+ "name": "Fitness Journey",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}
